@@ -1,0 +1,479 @@
+/*
+Theme Name: My Theme
+Author: Fabio Lillman
+*/
+
+
+html{
+    margin: 0;
+}
+*{
+padding: 0;
+margin: 0;
+list-style: none;
+box-sizing: border-box;
+text-decoration: none;
+}
+body{
+    height: 100vh;
+
+}
+a {color:#000000;}        
+a:visited {color:#020202;} 
+a:hover {color:#3f484e;}   
+
+/* HEADER WIDGET */
+
+.widget{
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    background-color: rgb(102, 167, 167);
+}
+
+/* HEADER WIDGET END*/
+
+/* HEADER  */
+header{
+    background-color: #9fcfcf;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3.5rem;
+}
+
+.nav-items{
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-item{
+    font-size: 1.1rem;
+    padding: 0 1rem 0 0;
+}
+
+.searchbar, .searchbar:focus{
+outline: none;
+border: 0;
+width: 13rem;
+border-radius: 4px;
+padding: 0.5rem;
+border: 1px solid gray;
+margin-bottom: 0.3rem;
+}
+
+.submit-btn{
+    border: 0;
+    border-radius: 4px;
+    height: 2rem;
+    width: 2.5rem;
+}
+.nav-menu, .header-search-menu{
+    display: block;
+}
+
+.menu-toggle, .header-search-toggle {
+    display: none;
+    height: 1.6rem;
+    width: 1.6rem;
+    /* transition: 0.1s ease-in; */
+  }
+
+
+.header-btn-wrap{
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.header-search-toggle, .menu-toggle {
+    border: none;
+    background-color: rgb(159, 207, 207);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.menu-toggle{
+   background-image: url("assets/Vectorss.png");
+   background-size: 1.1rem;
+}
+
+.active{
+    background-size: 1.6rem;
+    background-image: url("assets/Vector.png");
+}
+
+.header-search-toggle{
+    background-image: url("assets/ic_baseline-search.png");
+}
+
+.nav-menu{
+    display: block;
+}
+
+.hide-search2{
+    display: none;
+}
+
+.center-header{
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+}
+.nav-menu{
+    display: block;
+}
+@media only screen and (max-width: 990px) {
+    header{
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+}
+
+.center-header{
+    width: 90%;
+    align-self: center;
+    padding: 0.5rem 0;
+    flex-direction: column;
+}
+.nav-menu ul{
+    display: flex;
+    flex-direction: column;
+}
+.nav-menu ul li{
+margin: 0.4rem 0;
+}
+.nav-menu{
+    display: none;
+}
+.header-search-menu, .nav-menu{
+    padding-top: 0.5rem;
+    border-top: 1px solid black; 
+    margin-bottom: 0.5rem;
+}
+
+.menu-toggle, .header-search-toggle {
+        display: block;
+    }
+.hide-search{
+        display: none;
+    }
+    }
+
+@media only screen and (max-width: 600px) {
+
+    header{
+        width: 100%;
+    }
+  }
+/* HEADER END */
+
+/* SEARCH SIDEBAR */
+
+
+.sidebar-search #menu-menu-2{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+
+.sidebar-search{
+    min-width: 20rem;
+    max-height: 48rem;
+    border-radius: 10px;
+    position: sticky;
+    margin: 2rem 2rem 0 2rem;
+    padding: 1.4rem;
+    top: 3rem;
+    background-color: white;
+    box-shadow: 0.5px 2px 5px black;
+}
+
+.sidebar-search li{
+margin-top: 1rem;
+}
+/* Target all but the first */
+.sidebar-search h1:not(:first-child){
+    margin-top: 1rem;
+    }
+
+/* SEARCH SIDEBAR END */
+
+/* HERO PAGE */
+.hero-container{
+    padding: 5rem 0;
+    margin: auto;
+    max-width: 70%;
+}
+
+.hero-side-menu{
+    position: relative;
+}
+
+.hero-side-menu h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white
+}
+
+.hero-side-menu p{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 990px) {
+    .hero-side-menu h1, .hero-side-menu p{
+        position: static;
+        transform: translate(0, 0);
+        color: black;
+        text-align: center;
+        padding-top: 1rem;
+    }
+
+    }
+
+/* HERO PAGE END */
+
+/* HOME */
+.home-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: rgb(255, 235, 196);
+    padding-bottom: 8.6rem;
+    }
+
+.main-content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-article-container{
+    width: 70%;
+    border-radius: 10px;
+    margin-top: 2rem;
+    min-width: 50%;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0.5px 2px 5px black;
+}
+.home-article-container img{
+margin: 2rem 0;
+}
+
+.blog-text{
+    box-sizing: content-box;
+    padding-bottom: 1rem;
+    }
+
+    .pagination  {
+        width: 20rem;
+        height: 20rem;
+        background-color: red;
+        font-size: 2rem;
+      }
+
+
+.pagination-container{
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    text-decoration: underline;
+}
+
+.list-search{
+    width: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    padding-bottom: 1rem;
+    border-bottom: 1px solid gray;
+}
+
+@media only screen and (max-width: 1250px) {
+    .home-article-container{
+        width: 60%;
+    }
+    .sidebar-search{
+        min-width: 15rem
+    }
+    }
+@media only screen and (max-width: 990px) {
+        .home-article-container{
+            width: 90%;
+        }
+        .sidebar-search{
+            width: 90%;
+            align-self: center;
+        }
+        .home-container{
+            flex-direction: column;
+            }
+    }
+
+/* HOME END */
+
+
+/* SINGLE POST  */
+
+.single-post{
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+}
+
+.single-post-wrapper{
+    max-width: 60%;
+    background-color: red;
+}
+
+.single-post-wrapper h1{
+    /* align-self: center; */
+    /* text-align: center; */
+    background-color: orange;
+   /* font-size: 1.5rem; */
+    }
+    
+/* Messes with the pre-determined size */
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.blog-info{
+padding: 1rem 0;
+}
+
+.blog-info a{
+    padding: 0;
+    margin: 0;
+    }
+
+
+@media only screen and (max-width: 600px) {
+    .single-post{
+    /* padding: 0.5rem; */
+    }
+    .blogg-img{
+        width: 50%;
+        height: auto;
+        padding: 0.5rem 0 1rem 0;
+    }
+    .single-post h1{
+        align-self: center;
+       font-size: 1.5rem;
+        }
+    .single-post-wrapper {
+      background-color: lightblue;
+      padding: 1rem;
+      width: 100%;
+    }
+    .blog-info{
+        padding-top: 0.5rem;
+    }
+  }
+/* SINGLE POST END*/
+
+/* CONTACT PAGE */
+.contact-container{
+    padding: 3.5rem 0;
+    margin: auto;
+    max-width: 40%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .contact-container{
+        max-width: 60%;
+    }
+  }
+/* CONTACT PAGE END  */
+
+
+/* UNDERSIDA 1 */
+.row-contain{
+display: flex;
+flex-direction: row;
+min-width: 50%;
+max-width: 60%;
+}
+
+.contact-container h1{
+    margin-bottom: 1rem;
+    }
+
+.undersida-sidebar{
+    min-width: 30%;
+    padding: 0 2rem;
+}
+.undersida-sidebar li{
+    padding: 0.4rem 0rem;
+    border-bottom: 1px solid black;
+}
+
+@media only screen and (max-width: 990px) {
+    .row-contain{
+    flex-direction: column;
+    }
+
+    .undersida-sidebar{
+        min-width: 20%;
+        padding: 2rem 0;
+    }
+
+  }
+
+/* UNDERSIDA 1 END  */
+
+
+/* ERROR PAGE */
+
+.error-page{
+    width: 20rem;
+    height: 20rem;
+    background-color: black;
+}
+
+.coloring{
+    color: red;
+}
+
+/* ERROR PAGE END */
+
+/* FOOTER WIDGET */
+
+.footer-widget-area, .widget_a2a_share_save_widget{
+    background-color: rgb(159, 207, 207);
+}
+/* {
+    background-color: rgb(159, 207, 207) !important;
+} */
+
+.footer-widget{
+    padding: 2rem 3rem;
+    align-items: center;
+    /* padding-bottom: 138px; */
+}
+.is-layout-flex{
+    margin: 0;
+}
+/* FOOTER WIDGET END */
